@@ -6,7 +6,25 @@ body {
 }
 
 h1, h2 {
+  margin-bottom: 1.25rem;
   font-family: "Montserrat", sans-serif;
+}
+
+h1::after, h2::after {
+  display: block;
+  content: '';
+  margin-top: 1.3125rem;
+  width: 10.25rem;
+  height: 2px;
+  background-color: #F3625E;
+}
+
+@media screen and (max-width: 767px) {
+  h1::after, h2::after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 5.25rem;
+  }
 }
 
 h1 {
@@ -15,16 +33,52 @@ h1 {
   line-height: 1.09375;
 }
 
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 h2 {
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.23;
 }
 
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
 p {
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.375;
+}
+
+@media screen and (max-width: 991px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  p {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -40,9 +94,41 @@ a:hover, a:active {
   background-color: #172A3A;
 }
 
+.second-color {
+  color: #F3625E;
+}
+
+.btn-signup {
+  padding: 1.15625rem 3.25rem 1.15625rem 7.25rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.389;
+  color: #fff;
+  letter-spacing: 0.25px;
+  border-radius: 1.875rem;
+  background: #F3625E url("data:image/svg+xml,%3Csvg width='41' height='34' viewBox='0 0 41 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.9623 22.0868L32.7413 34L40.7062 0L0 16.0119L12.3864 20.1146L34.992 4.95147L16.9623 22.0868Z' fill='white'/%3E%3Cpath d='M12.3862 20.1147L15.7786 32.322L16.9621 22.0868L34.9918 4.95148L12.3862 20.1147Z' fill='%23D2D2D7'/%3E%3Cpath d='M22.0905 25.9587L15.7788 32.322L16.9623 22.0869L22.0905 25.9587Z' fill='%23B9B9BE'/%3E%3C/svg%3E") left 3rem center no-repeat;
+}
+
+.btn-signup:hover {
+  color: #fff;
+  background-color: #ef342f;
+}
+
+@media screen and (max-width: 767px) {
+  .btn-signup {
+    padding: 0.907rem 2.013rem;
+    font-size: 0.875rem;
+    background-image: none;
+  }
+}
+
 /* navigation */
+.main-header {
+  border-bottom: 2px solid #F0F5FA;
+}
+
 .main-header .navbar {
-  height: 70px;
+  height: 68px;
 }
 
 .main-header .navbar-brand {
@@ -100,10 +186,15 @@ a:hover, a:active {
 @media screen and (max-width: 991px) {
   .main-header .navbar-collapse {
     position: absolute;
-    top: 70px;
+    top: 0px;
+    margin-top: 70px;
     left: 0px;
     width: 100%;
+    background-color: #fff;
     z-index: 10;
+  }
+  .main-header .navbar-collapse.show {
+    min-height: calc(100vh - 70px);
   }
 }
 
@@ -148,6 +239,33 @@ a:hover, a:active {
     height: 2px;
     background: #F3625E;
   }
+}
+
+.lang-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 3.75rem;
+}
+
+.lang-switch .lang-item {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.357;
+  text-transform: uppercase;
+}
+
+.lang-switch .lang-item.current {
+  color: #F3625E;
 }
 
 /* mobile opener button */
@@ -202,5 +320,50 @@ a:hover, a:active {
   top: 7px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.hero {
+  padding-top: 6.8125rem;
+  padding-bottom: 6.8125rem;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 2.3125rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+  }
+}
+
+.hero-title {
+  padding-top: 1.75rem;
+}
+
+.hero-subtitle {
+  max-width: 30rem;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-subtitle {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.hero-signup {
+  padding-top: 4.4375rem;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-signup {
+    padding-top: 0.75rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-img img {
+    max-width: 8.75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

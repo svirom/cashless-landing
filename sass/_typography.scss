@@ -7,19 +7,61 @@ body {
 }
 
 h1, h2 {
+  margin-bottom: 1.25rem;
   font-family: $title-font;
+
+  &::after {
+    display: block;
+    content: '';
+    margin-top: 1.3125rem;
+    width: 10.25rem;
+    height: 2px;
+    background-color: $second-color;
+  }
+
+  @include until($md) {
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+      width: 5.25rem;
+    }
+  }
 }
 
 h1 {
   @include font(4rem, 600, 1.09375);
+
+  @include until($lg) {
+    font-size: 3rem;
+  }
+
+  @include until($md) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   @include font(3rem, 600, 1.23);
+
+  @include until($lg) {
+    font-size: 2.25rem;
+  }
+
+  @include until($md) {
+    font-size: 1.5rem;
+  }
 }
 
 p {
   @include font(1.5rem, 600, 1.375);
+
+  @include until($lg) {
+    font-size: 1.125rem;
+  }
+
+  @include until($md) {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -34,4 +76,8 @@ a {
 .dark-section {
   color: $dark-color;
   background-color: $main-color;
+}
+
+.second-color {
+  color: $second-color;
 }

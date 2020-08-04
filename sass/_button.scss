@@ -1,0 +1,19 @@
+.btn-signup {
+  padding: 1.15625rem 3.25rem 1.15625rem 7.25rem;
+  @include font(1.125rem, bold, 1.389);
+  color: $dark-color;
+  letter-spacing: 0.25px;
+  border-radius: $border-radius;
+  background: $second-color url("data:image/svg+xml,%3Csvg width='41' height='34' viewBox='0 0 41 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.9623 22.0868L32.7413 34L40.7062 0L0 16.0119L12.3864 20.1146L34.992 4.95147L16.9623 22.0868Z' fill='white'/%3E%3Cpath d='M12.3862 20.1147L15.7786 32.322L16.9621 22.0868L34.9918 4.95148L12.3862 20.1147Z' fill='%23D2D2D7'/%3E%3Cpath d='M22.0905 25.9587L15.7788 32.322L16.9623 22.0869L22.0905 25.9587Z' fill='%23B9B9BE'/%3E%3C/svg%3E") left 3rem center no-repeat;
+
+  &:hover {
+    color: $dark-color;
+    background-color: darken($second-color, 10%);
+  }
+
+  @include until($md) {
+    padding: 0.907rem 2.013rem;
+    font-size: 0.875rem;
+    background-image: none;
+  }
+}
