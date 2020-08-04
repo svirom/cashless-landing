@@ -1,0 +1,37 @@
+/* typography */
+
+body {
+  font-family: $main-font;
+  font-size: 100%;
+  color: $main-color;
+}
+
+h1, h2 {
+  font-family: $title-font;
+}
+
+h1 {
+  @include font(4rem, 600, 1.09375);
+}
+
+h2 {
+  @include font(3rem, 600, 1.23);
+}
+
+p {
+  @include font(1.5rem, 600, 1.375);
+}
+
+a {
+  color: $main-color;
+
+  &:hover,
+  &:active {
+    color: darken($main-color, 10%);
+  }
+}
+
+.dark-section {
+  color: $dark-color;
+  background-color: $main-color;
+}
