@@ -281,6 +281,9 @@ ul {
     height: 2px;
     background: #F3625E;
   }
+  .header-nav .nav-link {
+    font-size: 1.125rem;
+  }
 }
 
 .lang-switch {
