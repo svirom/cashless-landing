@@ -1,4 +1,7 @@
-
+.contacts {
+  padding-top: 2.3125rem;
+  padding-bottom: 2.1875rem;
+}
 
 .contacts-list {
   display: flex;
@@ -6,4 +9,26 @@
   align-items: center;
   font-family: $title-font;
   @include font(1.125rem, 600, 1.22);
+
+  @include until($lg) {
+    flex-direction: column;
+  }
+
+  @include until($md) {
+    font-size: 1rem;
+  }
+}
+
+.contacts-item {
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+
+.contacts-text {
+  font-weight: bold;
+  color: #000;
+
+  @include until($lg) {
+    margin-bottom: 0.5625rem;
+  }
 }

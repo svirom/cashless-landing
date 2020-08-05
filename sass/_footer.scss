@@ -1,0 +1,39 @@
+.main-footer {
+  padding-top: 1.5625rem;
+  padding-bottom: 1.6875rem;
+}
+
+.copyright-section {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  max-width: 46.25rem;
+  font-family: $title-font;
+  @include font(0.875rem, 500, 1.214);
+
+  span {
+    margin-left: 2.875rem;
+  }
+
+  @include until($lg) {
+    justify-content: center;
+  }
+
+  @include until($md) {
+    span {
+      display: none;
+    }
+  }
+}
+
+.copyright-logo {
+  img {
+    max-width: 5.9375rem;
+  }
+
+  @include until($md) {
+    img {
+      max-width: 4rem;
+    }
+  }
+}
