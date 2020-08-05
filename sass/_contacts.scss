@@ -1,0 +1,9 @@
+
+
+.contacts-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $title-font;
+  @include font(1.125rem, 600, 1.22);
+}

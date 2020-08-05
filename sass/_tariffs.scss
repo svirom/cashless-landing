@@ -1,0 +1,93 @@
+.tariffs {
+  padding-top: 5.625rem;
+  padding-bottom: 6.1875rem;
+
+  @include until($md) {
+    padding-top: 2.5625rem;
+    padding-bottom: 3.1rem;
+  }
+}
+
+.tariffs-section {
+  margin-top: 0.6875rem;
+
+  @include until($md) {
+    margin-top: 0.25rem;
+    text-align: center;
+  }
+}
+
+.tariffs-comission {
+  display: flex;
+  align-items: center;
+
+  @include until($md) {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+}
+
+.tariffs-amount {
+  flex-basis: 9.5625rem;
+  font-family: $title-font;
+  @include font(4rem, bold, 1.22);
+  color: $second-color;
+
+  span {
+    padding-left: 3px;
+    font-size: 2.25rem;
+  }
+
+  @include until($lg) {
+    flex-basis: 7.5rem;
+    font-size: 3rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include until($md) {
+    flex-basis: auto;
+    font-size: 2.25rem;
+
+    span {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+.tariffs-condition {
+  p {
+    margin-bottom: 0;
+    line-height: 1.22;
+  }
+
+  @include until($lg) {
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include until($md) {
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+
+.tariffs-img {
+  margin-top: -1.75rem;
+  text-align: center;
+
+  @include until($lg) {
+    margin-top: 1.5rem;
+    margin-left: auto;
+    max-width: 7.5rem;
+  }
+
+  @include until($md) {
+    margin-right: auto;
+    max-width: 6.125rem;
+  }
+}

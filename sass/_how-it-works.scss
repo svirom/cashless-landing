@@ -1,0 +1,150 @@
+.how-it-works {
+  padding-top: 5rem;
+  padding-bottom: 9.3125rem;
+
+  @include until($lg) {
+    padding-top: 2.9375rem;
+    padding-bottom: 2.25rem;
+  }
+
+  @include until($md) {
+    padding-bottom: 0;
+  }
+}
+
+.how-steps {
+  margin-top: 6.875rem;
+
+  @include until($lg) {
+    margin-top: 2.875rem;
+  }
+
+  @include until($md) {
+    margin-top: 0.75rem;
+  }
+}
+
+.how-step {
+  position: relative;
+  height: 100%;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 4.5rem;
+    right: -2rem;
+    width: 50px;
+    height: 21px;
+    background: url("data:image/svg+xml,%3Csvg width='50' height='21' viewBox='0 0 50 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M37.5312 7.18561H3.125C1.40625 7.18561 0 8.59186 0 10.3106C0 12.0294 1.40625 13.4356 3.125 13.4356H37.5312V19.0294C37.5312 20.4356 39.2188 21.1231 40.1875 20.1231L48.875 11.4044C49.4688 10.7794 49.4688 9.81061 48.875 9.18561L40.1875 0.466858C39.2188 -0.533142 37.5312 0.185608 37.5312 1.56061V7.18561Z' fill='%23FA686D'/%3E%3C/svg%3E") center no-repeat;
+  }
+
+  p {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 1.125rem;
+  }
+
+  @include until($lg) {
+    &::after {
+      top: 3rem;
+      right: -1.75rem;
+      width: 31px;
+      height: 13px;
+      background-size: 30px;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
+
+  @include until($md) {
+    margin-bottom: 3.75rem;
+
+    &::after {
+      top: auto;
+      bottom: 0.6875rem;
+      right: 50%;
+      @include transform(rotate(90deg) translateY(-1rem));
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+.how-step-img {
+  height: 15.9375rem;
+
+  @include until($lg) {
+    height: 9.22rem;
+  }
+
+  @include until($md) {
+    height: auto;
+    padding-bottom: 1.625rem;
+  }
+}
+
+.how-step-wrapper {
+  &:nth-of-type(1) {
+    .how-step-img {
+      padding-top: 0.55rem;
+    }
+  }
+
+  &:last-of-type {
+    .how-step {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @include until($lg) {
+    &:nth-of-type(1) {
+      .how-step-img {
+        img {
+          max-width: 7.46rem;
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      .how-step-img {
+        img {
+          max-width: 5.76rem;
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      .how-step-img {
+        img {
+          max-width: 5.645rem;
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      .how-step-img {
+        img {
+          max-width: 4.03rem;
+        }
+      }
+    }
+  }
+
+  @include until($md) {
+    padding-bottom: 1.6875rem;
+
+    &:last-of-type {
+      .how-step {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

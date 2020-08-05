@@ -1,0 +1,47 @@
+.promo {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+
+  @include until($lg) {
+    padding-top: 5.0625rem;
+  }
+
+  @include until($md) {
+    padding-top: 3.125rem;
+    padding-bottom: 2.125rem;
+  }
+}
+
+.promo-half {
+  max-width: 30.625rem;
+
+  @include until($md) {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.promo-img {
+  margin-bottom: 6.4375rem;
+
+  img {
+    max-width: 9.375rem;
+  }
+
+  @include until($lg) {
+    margin-bottom: 3.375rem;
+
+    img {
+      max-width: 5rem;
+    }
+  }
+
+  @include until($md) {
+    margin-bottom: 1.125rem;
+
+    img {
+      max-width: 3.75rem;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.service {
+  padding-top: 6.0625rem;
+  padding-bottom: 5.5625rem;
+
+  @include until($lg) {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.service-clients {
+  margin-top: 4.625rem;
+  margin-bottom: 2.6875rem;
+
+  @include until($lg) {
+    margin-top: 1.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.service-client {
+  text-align: center;
+}
+
+.service-client-img {
+  display: flex;
+  align-items: flex-end;
+  width: 13.65rem;
+  height: 13.65rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.625rem;
+  border-radius: 50%;
+  background-color: #EFEFEF;
+
+  @include until($lg) {
+    width: 9.41rem;
+    height: 9.41rem;
+  }
+}
+
+.service-client-couriers {
+  position: relative;
+
+  img {
+    position: absolute;
+    bottom: -8px;
+    right: -4px;
+  }
+
+  @include until($lg) {
+    img {
+      bottom: -5px;
+      right: -3px;
+      width: 11.5rem;
+    }
+  }
+}
+
+.service-mobile-img {
+  display: flex;
+  align-items: flex-end;
+  width: 18.125rem;
+  margin: 1.125rem auto 1.9375rem;
+  height: 11.8125rem;
+  border-radius: 50%;
+  background-color: #EFEFEF;
+  overflow: hidden;
+}

@@ -1,0 +1,42 @@
+.signup {
+  padding-top: 8.4375rem;
+  padding-bottom: 8.4375rem;
+
+  p {
+    font-weight: 400;
+  }
+
+  @include until($lg) {
+    padding-top: 4.8125rem;
+    padding-bottom: 4.125rem;
+  }
+}
+
+.signup-section {
+  @include until($md) {
+    text-align: center;
+  }
+}
+
+.signup-img {
+  text-align: right;
+
+  @include until($lg) {
+    margin-left: auto;
+    width: 11.25rem;
+  }
+
+  @include until($md) {
+    margin-right: auto;
+    margin-bottom: 2.79rem;
+    text-align: center;
+  }
+}
+
+.signup-button {
+  padding-top: 1.5625rem;
+
+  @include until($md) {
+    padding-top: 2.875rem;
+  }
+}

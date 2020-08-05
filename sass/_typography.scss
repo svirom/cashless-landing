@@ -20,6 +20,8 @@ h1, h2 {
   }
 
   @include until($md) {
+    text-align: center;
+
     &::after {
       margin-left: auto;
       margin-right: auto;
@@ -52,11 +54,32 @@ h2 {
   }
 }
 
+h3 {
+  font-family: $title-font;
+  @include font(2.25rem, 600, 1.44);
+
+  @include until($lg) {
+    font-size: 1.5rem;
+  }
+}
+
 p {
   @include font(1.5rem, 600, 1.375);
 
   @include until($lg) {
     font-size: 1.125rem;
+  }
+
+  @include until($md) {
+    font-size: 1rem;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
+
+  @include until($lg) {
+    font-size: 1.5rem;
   }
 
   @include until($md) {
@@ -78,6 +101,16 @@ a {
   background-color: $main-color;
 }
 
+.middle-section {
+  background-color: $middle-color;
+}
+
 .second-color {
   color: $second-color;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

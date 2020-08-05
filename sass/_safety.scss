@@ -1,0 +1,41 @@
+.safety {
+  padding-top: 5.5rem;
+  padding-bottom: 5.6875rem;
+
+  @include until($lg) {
+    padding-top: 4rem;
+    padding-bottom: 3.625rem;
+  }
+
+  @include until($md) {
+    padding-top: 2.375rem;
+    padding-bottom: 2.1875rem;
+  }
+}
+
+.safety-section {
+  margin-top: 1.125rem;
+
+  @include until($lg) {
+    margin-top: 0;
+  }
+
+  @include until($md) {
+    text-align: center;
+  }
+}
+
+.safety-img {
+  margin-top: -3.75rem;
+  text-align: center;
+
+  @include until($lg) {
+    margin-left: auto;
+    max-width: 7.5rem;
+  }
+
+  @include until($md) {
+    margin-right: auto;
+    max-width: 6.125rem;
+  }
+}
